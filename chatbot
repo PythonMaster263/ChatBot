@@ -1,0 +1,79 @@
+import sys
+import os
+import webbrowser
+import datetime
+
+
+currentTime = datetime.datetime.now()
+currentTime.hour
+0
+if currentTime.hour < 12:
+    print('Good Morning!')
+elif 12 <= currentTime.hour < 18:
+    print('Good Afternoon!')
+else:
+    print('Good Evening!')
+
+
+while True:
+    s = input("What you wanna say?")
+
+    if "Hi".lower() in s:
+        print("Hi!")
+
+    elif "How are you".lower() in s:
+        print("I am fine. Thank you for asking!")
+
+    elif "Tell me a joke".lower() in s:
+        webbrowser.open("https://www.rd.com/jokes/")
+
+    elif "Can you detect ghost".lower() in s:
+        print("Boo! No, but I can tell you a horror story!")
+
+    elif "Tell me a horror story".lower() in s:
+        webbrowser.open("https://www.scoopwhoop.com/world/short-scary-stories-reddit/")
+
+    elif "Open youtube".lower() in s:
+         webbrowser.open("https://www.google.com/")
+
+    elif  "Open gmail".lower() in s:
+         webbrowser.open("https://www.gmail.com/")
+
+    elif "Open edlantic".lower() in s:
+         webbrowser.open("https://mcs.edlantic.com/")
+
+    elif "Open school website".lower() in s:
+        webbrowser.open("https://www.modernconventschool.com/")
+
+    elif "Who are you".lower() in s:
+        print("i am ChatBot made by Aaryman!")
+
+    elif 'What is the time'.lower() in s:
+        strTime = datetime.datetime.now().strftime("%H:%M:%S")
+        print(f"Sir, the time is {strTime}")
+
+    elif "Open google".lower() in s:
+        path = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+        os.startfile(path)
+
+    elif "Open edge".lower() in s:
+        e = "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+        os.startfile(e)
+
+    elif 'about sports'.lower() in s:
+        webbrowser.open(
+            "https://www.google.com/search?q=sports&oq=sports&aqs=chrome..69i57j0l6.1213j0j7&sourceid=chrome&ie=UTF-8jarvis.py")
+
+    elif 'shutdown'.lower() in s:
+        os.system("shutdown /s /t 0")
+
+    elif 'restart'.lower() in s:
+        os.system("shutdown /r /t 0")
+
+    elif "Exit".lower() in s:
+        sys.exit()
+
+    else:
+        print("I Never thought about that before!")
+
+
